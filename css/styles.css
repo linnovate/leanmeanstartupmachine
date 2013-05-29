@@ -1,0 +1,421 @@
+/* line 1, ../saas/styles.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 12, ../saas/styles.scss */
+body {
+  background: #f5f5f5;
+  font-family: 'Quantico', sans-serif;
+  color: #161616;
+  font-size: 19px;
+}
+
+/* line 20, ../saas/styles.scss */
+a:link, a:visited {
+  color: #f16529;
+  text-decoration: none;
+}
+
+/* line 24, ../saas/styles.scss */
+a:hover, a:active {
+  color: #d85b25;
+}
+
+/* line 28, ../saas/styles.scss */
+#main-banner {
+  background: url(../images/bg.png);
+  float: left;
+  clear: both;
+  display: block;
+  width: 100%;
+}
+
+/* line 36, ../saas/styles.scss */
+.inner {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+}
+
+/* line 43, ../saas/styles.scss */
+.site-header {
+  margin-top: 20px;
+}
+
+/* line 47, ../saas/styles.scss */
+#hero,
+.site-header {
+  float: left;
+  width: 100%;
+}
+
+/* line 52, ../saas/styles.scss */
+.logo {
+  background: url(../images/linnovate-logo.png) no-repeat;
+  text-indent: -999px;
+  display: block;
+  width: 146px;
+  height: 32px;
+  float: left;
+}
+
+/* line 62, ../saas/styles.scss */
+a.cta {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #8dc63f;
+  display: block;
+  font-size: 22px;
+  float: right;
+  padding: 10px 50px;
+  box-shadow: inset 0px -20px 0 #84c038, 0px 1px 1px #5fa231;
+  text-shadow: 1px 1px 1px #5fa231;
+  transition: 200ms;
+}
+
+/* line 77, ../saas/styles.scss */
+.cta:hover {
+  -webkit-transform: translateY(-3px);
+  box-shadow: inset 0px -20px 0 #84c038,  0px 4px 0px #5fa231;
+}
+
+/* line 82, ../saas/styles.scss */
+.cta.large {
+  margin-top: 20px;
+  width: 75%;
+  text-align: center;
+  float: none;
+  clear: both;
+  margin: 0 auto;
+}
+
+/* line 90, ../saas/styles.scss */
+#hero {
+  margin-top: 50px;
+  display: block;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+/* line 98, ../saas/styles.scss */
+#hero h2 {
+  color: #d85b25;
+  font-weight: normal;
+  font-size: 19px;
+  position: absolute;
+  right: 90px;
+  top: 140px;
+}
+/* line 107, ../saas/styles.scss */
+#hero h1 {
+  font-size: 50px;
+  font-weight: normal;
+  z-index: 11;
+  text-transform: uppercase;
+}
+/* line 113, ../saas/styles.scss */
+#hero h1 span {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-left: -20px;
+  z-index: 400;
+  position: relative;
+  margin-right: -20px;
+  width: 246px;
+  background: url(../images/mean.png) top no-repeat;
+  text-indent: -9999px;
+  display: inline-block;
+}
+/* line 127, ../saas/styles.scss */
+#hero h1:before {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 170px;
+  height: 170px;
+  border-radius: 100px;
+  content: "";
+  background: white;
+  background: none;
+  box-shadow: 0px 0px 350px rgba(255, 255, 255, 0.5);
+  top: 10px;
+  left: 240px;
+}
+
+/* line 146, ../saas/styles.scss */
+#stack {
+  margin-top: 60px;
+  padding-bottom: 100px;
+  display: block;
+  float: left;
+  width: 100%;
+  perspective: 600px;
+}
+/* line 153, ../saas/styles.scss */
+#stack li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  margin: 2%;
+  position: relative;
+}
+/* line 160, ../saas/styles.scss */
+#stack li:after {
+  content: "";
+  display: block;
+  background: #2d2e2e;
+  height: 200px;
+  position: absolute;
+  -webkit-transform: perspective(400px) rotateX(85deg);
+  top: -12px;
+  z-index: 0;
+  left: 20px;
+  right: 20px;
+  transition: 200ms;
+}
+/* line 176, ../saas/styles.scss */
+#stack li:hover:after {
+  content: "";
+  background: #d85b25;
+  -webkit-transform: perspective(400px) rotateX(-20deg);
+}
+/* line 183, ../saas/styles.scss */
+#stack li a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding-top: 110px;
+  transtion: 200ms;
+  z-index: 10;
+  position: relative;
+}
+/* line 195, ../saas/styles.scss */
+#stack li.mongo a {
+  background: url(../images/mongo.png) no-repeat center 5px;
+}
+/* line 196, ../saas/styles.scss */
+#stack li.mongo:hover a {
+  background: url(../images/mongo-hover.png) no-repeat center 5px;
+}
+/* line 197, ../saas/styles.scss */
+#stack li.express a {
+  background: url(../images/express.png) no-repeat center 20px;
+}
+/* line 198, ../saas/styles.scss */
+#stack li.express:hover a {
+  background: url(../images/express-hover.png) no-repeat center 20px;
+}
+/* line 199, ../saas/styles.scss */
+#stack li.angular a {
+  background: url(../images/angular.png) no-repeat center 0px;
+}
+/* line 200, ../saas/styles.scss */
+#stack li.angular:hover a {
+  background: url(../images/angular-hover.png) no-repeat center 0px;
+}
+/* line 201, ../saas/styles.scss */
+#stack li.nodejs a {
+  background: url(../images/node.png) no-repeat center 10px;
+}
+/* line 202, ../saas/styles.scss */
+#stack li.nodejs:hover a {
+  background: url(../images/node-hover.png) no-repeat center 10px;
+}
+
+/* line 207, ../saas/styles.scss */
+#main-content {
+  background: url(../images/white-bg.png) repeat-x top whitesmoke;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  clear: both;
+}
+/* line 215, ../saas/styles.scss */
+#main-content p {
+  margin-left: 40px;
+}
+
+/* line 220, ../saas/styles.scss */
+#main-content .inner {
+  padding-left: 256px;
+  position: relative;
+}
+
+/* line 223, ../saas/styles.scss */
+.ninja {
+  width: 330px;
+  height: 350px;
+  background: url(../images/ninja2.png) no-repeat;
+  display: block;
+  position: absolute;
+  left: -100px;
+  top: -60px;
+}
+
+@-webkit-keyframes flip {
+  /* line 234, ../saas/styles.scss */
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+  }
+
+  /* line 235, ../saas/styles.scss */
+  25% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+  }
+
+  /* line 236, ../saas/styles.scss */
+  50% {
+    -webkit-transform: perspective(400px) rotateY(180deg);
+  }
+
+  /* line 237, ../saas/styles.scss */
+  75% {
+    -webkit-transform: perspective(400px) rotateY(270deg);
+  }
+
+  /* line 238, ../saas/styles.scss */
+  100% {
+    -webkit-transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+/* line 242, ../saas/styles.scss */
+li:hover .hex {
+  -webkit-animation: flip 500ms;
+}
+
+/* line 246, ../saas/styles.scss */
+.numbers {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+/* line 253, ../saas/styles.scss */
+.numbers li {
+  float: left;
+  text-align: center;
+  width: 25%;
+}
+/* line 260, ../saas/styles.scss */
+.numbers .hex {
+  background: url(../images/hex.png);
+  width: 101px;
+  height: 115px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 42px;
+  padding-top: 25px;
+  font-weight: normal;
+  transition: 200ms;
+}
+/* line 277, ../saas/styles.scss */
+.numbers .label {
+  clear: both;
+  font-size: 20px;
+  line-height: 1;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #4c4c4c;
+  display: block;
+}
+/* line 286, ../saas/styles.scss */
+.numbers strong {
+  font-size: 30px;
+  font-weight: normal;
+  display: block;
+}
+
+@-webkit-keyframes fold {
+  /* line 298, ../saas/styles.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateX(-100deg) translateZ(300px) scale(0.5);
+  }
+
+  /* line 305, ../saas/styles.scss */
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg) translateZ(0px) scale(1) translateY(100px);
+    opacity: 0.95;
+  }
+}
+
+/* line 310, ../saas/styles.scss */
+.lightbox {
+  width: 70%;
+  height: 500px;
+  background: white;
+  top: 0px;
+  position: absolute;
+  opacity: 0;
+  left: -9999px;
+  z-index: 1000;
+}
+
+/* line 321, ../saas/styles.scss */
+.lightbox.open {
+  left: 220px;
+  opacity: 1;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation: fold 1000ms;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/* line 332, ../saas/styles.scss */
+.lightbox {
+  padding: 40px;
+}
+/* line 337, ../saas/styles.scss */
+.lightbox .left-side {
+  width: 70%;
+  float: left;
+  padding-right: 10px;
+  border-right: 1px solid #ddd;
+  margin-right: 20px;
+  font-family: "open sans", arial, sans-serif;
+  font-size: 16px;
+  line-height: 190%;
+}
+/* line 347, ../saas/styles.scss */
+.lightbox .left-side .tech-logo {
+  margin-bottom: 20px;
+}
+/* line 353, ../saas/styles.scss */
+.lightbox .close {
+  position: absolute;
+  right: 10px;
+  background: blue;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background: url(../images/x.png) no-repeat center;
+  transition: 200ms;
+  display: block;
+}
+/* line 367, ../saas/styles.scss */
+.lightbox .close:hover {
+  -webkit-transform: rotate(180deg);
+}
+/* line 372, ../saas/styles.scss */
+.lightbox .right-side .label {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+/* line 376, ../saas/styles.scss */
+.lightbox .right-side .infobit {
+  margin-bottom: 50px;
+}
+/* line 381, ../saas/styles.scss */
+.lightbox .right-side blockquote {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #f16529;
+}
