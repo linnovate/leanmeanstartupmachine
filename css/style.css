@@ -1,43 +1,309 @@
-/*
-Syntax error: Invalid CSS after "}": expected selector or at-rule, was "<<<<<<< HEAD"
-        on line 388 of sass/style.scss
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-383: 			margin-top:20px;
-384: 			color:$orange;
-385: 		}
-386: 	}
-387: }
-388: <<<<<<< HEAD
-389: 
-390: #leadForm {
-391: 	input {
-392: 		border: 1px solid #000;
-393: 		padding: 5px;
+body {
+  background: #f5f5f5;
+  font-family: 'Quantico', sans-serif;
+  color: #161616;
+  font-size: 19px; }
 
-Backtrace:
-sass/style.scss:388
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/scss/parser.rb:1148:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/scss/parser.rb:1084:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/scss/parser.rb:28:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:342:in `_to_tree'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:315:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:262:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:362:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:235:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:452:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:315:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.9/bin/sass:9
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"}\": expected selector or at-rule, was \"<<<<<<< HEAD\"\A         on line 388 of sass/style.scss\A \A 383: 			margin-top:20px;\A 384: 			color:$orange;\A 385: 		}\A 386: 	}\A 387: }\A 388: <<<<<<< HEAD\A 389: \A 390: #leadForm {\A 391: 	input {\A 392: 		border: 1px solid #000;\A 393: 		padding: 5px;"; }
+a:link, a:visited {
+  color: #f16529;
+  text-decoration: none; }
+
+a:hover, a:active {
+  color: #d85b25; }
+
+#main-banner {
+  background: url(../img/bg.png);
+  float: left;
+  clear: both;
+  display: block;
+  width: 100%; }
+
+.inner {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  clear: both; }
+
+.site-header {
+  margin-top: 20px; }
+
+#hero,
+.site-header {
+  float: left;
+  width: 100%; }
+
+.logo {
+  background: url(../img/linnovate-logo.png) no-repeat;
+  text-indent: -999px;
+  display: block;
+  width: 146px;
+  height: 32px;
+  float: left; }
+
+a.cta {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #8dc63f;
+  display: block;
+  font-size: 22px;
+  float: right;
+  padding: 10px 50px;
+  box-shadow: inset 0px -20px 0 #84c038, 0px 1px 1px #5fa231;
+  text-shadow: 1px 1px 1px #5fa231;
+  transition: 200ms; }
+
+.cta:hover {
+  -webkit-transform: translateY(-3px);
+  box-shadow: inset 0px -20px 0 #84c038,  0px 4px 0px #5fa231; }
+
+.cta.large {
+  margin-top: 20px;
+  width: 75%;
+  text-align: center;
+  float: none;
+  clear: both;
+  margin: 0 auto; }
+
+#hero {
+  margin-top: 50px;
+  display: block;
+  color: white;
+  text-align: center;
+  position: relative; }
+  #hero h2 {
+    color: #d85b25;
+    font-weight: normal;
+    font-size: 19px;
+    position: absolute;
+    right: 90px;
+    top: 140px; }
+  #hero h1 {
+    font-size: 50px;
+    font-weight: normal;
+    z-index: 11;
+    text-transform: uppercase; }
+    #hero h1 span {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      margin-left: -20px;
+      z-index: 400;
+      position: relative;
+      margin-right: -20px;
+      width: 246px;
+      background: url(../img/mean.png) top no-repeat;
+      text-indent: -9999px;
+      display: inline-block; }
+    #hero h1:before {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      width: 170px;
+      height: 170px;
+      border-radius: 100px;
+      content: "";
+      background: white;
+      background: none;
+      box-shadow: 0px 0px 350px rgba(255, 255, 255, 0.5);
+      top: 10px;
+      left: 240px; }
+
+#stack {
+  margin-top: 60px;
+  padding-bottom: 100px;
+  display: block;
+  float: left;
+  width: 100%;
+  perspective: 600px; }
+  #stack li {
+    width: 20%;
+    float: left;
+    text-align: center;
+    margin: 2%;
+    position: relative; }
+    #stack li:after {
+      content: "";
+      display: block;
+      background: #2d2e2e;
+      height: 200px;
+      position: absolute;
+      -webkit-transform: perspective(400px) rotateX(85deg);
+      top: -12px;
+      z-index: 0;
+      left: 20px;
+      right: 20px;
+      transition: 200ms; }
+    #stack li:hover:after {
+      content: "";
+      background: #d85b25;
+      -webkit-transform: perspective(400px) rotateX(-20deg); }
+    #stack li a {
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      padding-top: 110px;
+      transtion: 200ms;
+      z-index: 10;
+      position: relative; }
+    #stack li.mongo a {
+      background: url(../img/mongo.png) no-repeat center 5px; }
+    #stack li.mongo:hover a {
+      background: url(../img/mongo-hover.png) no-repeat center 5px; }
+    #stack li.express a {
+      background: url(../img/express.png) no-repeat center 20px; }
+    #stack li.express:hover a {
+      background: url(../img/express-hover.png) no-repeat center 20px; }
+    #stack li.angular a {
+      background: url(../img/angular.png) no-repeat center 0px; }
+    #stack li.angular:hover a {
+      background: url(../img/angular-hover.png) no-repeat center 0px; }
+    #stack li.nodejs a {
+      background: url(../img/node.png) no-repeat center 10px; }
+    #stack li.nodejs:hover a {
+      background: url(../img/node-hover.png) no-repeat center 10px; }
+
+#main-content {
+  background: url(../img/white-bg.png) repeat-x top whitesmoke;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  clear: both; }
+  #main-content p {
+    margin-left: 40px; }
+
+#main-content .inner {
+  padding-left: 256px;
+  position: relative; }
+
+.ninja {
+  width: 330px;
+  height: 350px;
+  background: url(../img/ninja2.png) no-repeat;
+  display: block;
+  position: absolute;
+  left: -100px;
+  top: -60px; }
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg); }
+
+  25% {
+    -webkit-transform: perspective(400px) rotateY(90deg); }
+
+  50% {
+    -webkit-transform: perspective(400px) rotateY(180deg); }
+
+  75% {
+    -webkit-transform: perspective(400px) rotateY(270deg); }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(360deg); } }
+
+li:hover .hex {
+  -webkit-animation: flip 500ms; }
+
+.numbers {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  float: left;
+  clear: both;
+  width: 100%; }
+  .numbers li {
+    float: left;
+    text-align: center;
+    width: 25%; }
+  .numbers .hex {
+    background: url(../img/hex.png);
+    width: 101px;
+    height: 115px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    padding-top: 25px;
+    font-weight: normal;
+    transition: 200ms; }
+  .numbers .label {
+    clear: both;
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #4c4c4c;
+    display: block; }
+  .numbers strong {
+    font-size: 30px;
+    font-weight: normal;
+    display: block; }
+
+@-webkit-keyframes fold {
+  0% {
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateX(-100deg) translateZ(300px) scale(0.5); }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg) translateZ(0px) scale(1) translateY(100px);
+    opacity: 0.95; } }
+
+.lightbox {
+  width: 70%;
+  height: 500px;
+  background: white;
+  top: 0px;
+  position: absolute;
+  opacity: 0;
+  left: -9999px;
+  z-index: 1000; }
+
+.lightbox.open {
+  left: 220px;
+  opacity: 1;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation: fold 1000ms;
+  -webkit-animation-fill-mode: forwards; }
+
+.lightbox {
+  padding: 40px; }
+  .lightbox .left-side {
+    width: 70%;
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+    margin-right: 20px;
+    font-family: "open sans", arial, sans-serif;
+    font-size: 16px;
+    line-height: 190%; }
+    .lightbox .left-side .tech-logo {
+      margin-bottom: 20px; }
+  .lightbox .close {
+    position: absolute;
+    right: 10px;
+    background: blue;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    text-indent: -9999px;
+    background: url(../img/x.png) no-repeat center;
+    transition: 200ms;
+    display: block; }
+  .lightbox .close:hover {
+    -webkit-transform: rotate(180deg); }
+  .lightbox .right-side .label {
+    text-transform: uppercase;
+    font-size: 15px; }
+  .lightbox .right-side .infobit {
+    margin-bottom: 50px; }
+  .lightbox .right-side blockquote {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #f16529; }
+
+#leadForm input {
+  border: 1px solid #000;
+  padding: 5px; }
