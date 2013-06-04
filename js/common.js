@@ -20,6 +20,8 @@ function changeNinja(input, haldID){
 }
 
 function validate(input) {
+	$(input).val($(input).val().trim());
+	
 	if ($(input).val() == "") {
 		$(input).addClass("invalid");
 	} else {
