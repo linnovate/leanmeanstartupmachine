@@ -13,7 +13,7 @@
 	<section id="main-banner">
 		<div class="inner">
 			<header class="site-header">
-				<h2 class="logo">Linnovate</h2>
+				<a class="logo" href="http://linnovate.net">Linnovate</a>
 				<a href="javascript:openLightbox('form');" class="cta">Bring it On</a>
 			</header>
 			<section id="hero">
@@ -48,6 +48,14 @@
 			<a href="javascript:openLightbox('form');" class="cta large">Hire Your Ninja</a>
 		</div>
 	</section>
+	<footer>
+		<div class="pull-left">
+			© 2013 Linnovate LTD.
+		</div>
+		<div class="pull-right">
+			<a href="http://linnovate.net">About</a>
+		</div>
+	</footer>
 	<div class="mongo lightbox">
 		<a href="#" class="close">close</a>
 		<div class="left-side">
@@ -88,7 +96,7 @@
 					Website
 				</div>
 				<div class="info">
-					<a href="http://expressjs.com/">expressjs.com/</a>
+					<a href="http://expressjs.com/">expressjs.com</a>
 				</div>			
 			</div>
 			<div class="infobit">
@@ -158,14 +166,19 @@
 		</div>
 	</div>
 	<div class="form lightbox">
-		<h1>Hire your Ninja!</h1>
+		<h1>hire your ninja!</h1>
+		<p>please fill up this form so we'll contact you back</p>
 		<form id="leadForm">
-			<input type="text" placeholder="First Name" name="first_name">
-			<input type="text" placeholder="Last Name" name="last_name">
-			<input type="text" placeholder="Phone Number" name="phone">
-			<input type="text" placeholder="Email" name="email">
-			<input type="submit" value="Submit">
+			<input type="text" placeholder="First Name" name="first_name" onblur="validate(this);" onfocus="changeNinja(this, 1);"><br>
+			<input type="text" placeholder="Last Name" name="last_name" onblur="validate(this);" onfocus="changeNinja(this, 2);"><br>
+			<input type="tel" placeholder="Phone Number" name="phone" onblur="validate(this);" onfocus="changeNinja(this, 3);"><br>
+			<input type="email" placeholder="Email" name="email" onblur="validate(this);" onfocus="changeNinja(this, 4);"><br>
+			<input type="submit" value="Submit" class="cta">
 		</form>
+		<div class="ninja-container">
+			<img src="img/ninja-full.jpg" alt="">
+			<img class="ninja-half" src="img/ninja-half-1.jpg" alt="">
+		</div>
 	</div>
 </body>
 </html>

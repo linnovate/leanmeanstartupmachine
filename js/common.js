@@ -1,3 +1,6 @@
+var emailRegex = /\S+@\S+\.\S+/;
+var telRegex = /^\d+$/;
+
 $.fn.center = function() {
 	this.css("position", "absolute");
 	this.css("top", Math.max(0, (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop()) + "px");
@@ -8,6 +11,31 @@ $.fn.center = function() {
 function openLightbox(element) {
 	$(".lightbox").removeClass("open").css('left', '-999px');
 	$("." + element + ".lightbox").toggleClass("open").center();
+	if (element == "form") $("." + element + ".lightbox").find("input").first().focus();
+}
+
+function changeNinja(input, haldID){
+	$(input).removeClass("invalid");
+	$(".ninja-half").attr("src", "img/ninja-half-" + haldID + ".jpg");
+}
+
+function validate(input) {
+	if ($(input).val() == "") {
+		$(input).addClass("invalid");
+	} else {
+		switch ($(input).attr("type")) {
+			case "email":
+				if (!emailRegex.test($(input).val())) $(input).addClass("invalid");
+				break;
+			case "tel":
+				if (!telRegex.test($(input).val())) $(input).addClass("invalid");
+				break;
+		}
+	}
+}
+
+function saveLeadCallback(data){
+	alert(data);
 }
 
 $(document).ready(function() {
@@ -27,7 +55,6 @@ $(document).ready(function() {
 	})();
 
 	$(document).keydown(function(e) {
-		console.log(e.which, 'key pressed');
 		switch (e.which) {
 			case 27 /* esc */ :
 				$(".lightbox").removeClass("open").css('left', '-999px');
@@ -73,25 +100,22 @@ $(document).ready(function() {
 	});
 
 	$("#leadForm").submit(function(e) {
-		var url = "https://dev.linnovate.net/lead/new?key=cbd142ed135d53baea9e4dfa330649149ef93403&project_id=leads&" + $("#leadForm").serialize();
-		alert(url);
-		$.ajax({
-            url: url,
-            type: 'GET',
-            dataType: 'jsonp',
-            error: function(xhr, status, error) {
-            	debugger
-                alert("error");
-            },
-            success: function(json) {
-            	debugger
-                alert("success");
-            }
-        });
+		if (leadForm.first_name.value && leadForm.last_name.value && leadForm.phone.value && leadForm.email.value && telRegex.test(leadForm.phone.value) && emailRegex.test(leadForm.email.value)) {
+			//Post Form Data
+			var url = "https://dev.linnovate.net/lead/new?callback=saveLeadCallback&key=6dc339490d7476bc0d51c901cef020832ae6f9d6&project_id=leads&" + $("#leadForm").serialize();
+			$.ajax({
+		        url: url, 
+		        dataType: 'jsonp',
+		        success: function(data){
+		            //There is error in the redmine! json is invalid
+		        }
+		    });
 
-		$(".lightbox").removeClass("open").css('left', '-999px');
+			//Close lightbox
+			$(".lightbox").removeClass("open").css('left', '-999px');
 
-		//Prevent form submission
-		e.preventDefault();
+			//Prevent form submission
+			e.preventDefault();
+		}
 	});
 });
