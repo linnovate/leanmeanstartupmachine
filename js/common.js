@@ -65,7 +65,6 @@ $(document).ready(function() {
 
 	$(".lightbox").click(function(e) {
 		e.stopPropagation();
-
 	});
 
 	$("#stack").find("li").click(function(e) {
@@ -74,7 +73,21 @@ $(document).ready(function() {
 	});
 
 	$("#leadForm").submit(function(e) {
-		alert($("#leadForm").serialize());
+		var url = "https://dev.linnovate.net/lead/new?key=cbd142ed135d53baea9e4dfa330649149ef93403&project_id=leads&" + $("#leadForm").serialize();
+		alert(url);
+		$.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'jsonp',
+            error: function(xhr, status, error) {
+            	debugger
+                alert("error");
+            },
+            success: function(json) {
+            	debugger
+                alert("success");
+            }
+        });
 
 		$(".lightbox").removeClass("open").css('left', '-999px');
 
