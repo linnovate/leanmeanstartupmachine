@@ -26,7 +26,7 @@ a:hover, a:active {
 
 }
 #main-banner {
-	background:url(../images/bg.png);
+	background:url(../img/bg.png);
 	float:left;
 	clear:both;
 	display:block;
@@ -50,7 +50,7 @@ width:100%;
 
 }
 .logo {
-	background:url(../images/linnovate-logo.png) no-repeat;
+	background:url(../img/linnovate-logo.png) no-repeat;
 	text-indent:-999px;
 
 	display:block;
@@ -119,7 +119,7 @@ margin:0 auto;
 			margin-right:-20px;
 			width:246px;
 			
-			background:url(../images/mean.png) top no-repeat;
+			background:url(../img/mean.png) top no-repeat;
 			text-indent:-9999px;
 			display: inline-block;
 		}
@@ -192,21 +192,21 @@ margin:0 auto;
 
 
 		}
-		&.mongo a{background:url(../images/mongo.png) no-repeat  center 5px;}
-		&.mongo:hover a {background:url(../images/mongo-hover.png) no-repeat  center 5px;}
-		&.express a {background:url(../images/express.png) no-repeat center 20px;}		
-		&.express:hover a {background:url(../images/express-hover.png) no-repeat center 20px;}
-		&.angular a {background:url(../images/angular.png) no-repeat center 00px;}
-		&.angular:hover a {background:url(../images/angular-hover.png) no-repeat center 00px;}
-		&.nodejs a {background:url(../images/node.png) no-repeat center 10px;}
-		&.nodejs:hover a{background:url(../images/node-hover.png) no-repeat center 10px;}
+		&.mongo a{background:url(../img/mongo.png) no-repeat  center 5px;}
+		&.mongo:hover a {background:url(../img/mongo-hover.png) no-repeat  center 5px;}
+		&.express a {background:url(../img/express.png) no-repeat center 20px;}		
+		&.express:hover a {background:url(../img/express-hover.png) no-repeat center 20px;}
+		&.angular a {background:url(../img/angular.png) no-repeat center 00px;}
+		&.angular:hover a {background:url(../img/angular-hover.png) no-repeat center 00px;}
+		&.nodejs a {background:url(../img/node.png) no-repeat center 10px;}
+		&.nodejs:hover a{background:url(../img/node-hover.png) no-repeat center 10px;}
 
 	}
 }
 
 #main-content {
 
-	background:url(../images/white-bg.png) repeat-x top #f5f5f5;
+	background:url(../img/white-bg.png) repeat-x top #f5f5f5;
 	padding-top:40px;
 	
 	padding-bottom:40px;
@@ -223,7 +223,7 @@ margin:0 auto;
 .ninja {
 	width:330px;
 	height:350px;
-	background:url(../images/ninja2.png) no-repeat;
+	background:url(../img/ninja2.png) no-repeat;
 	display:block;
 	position:absolute;
 	left:-100px;
@@ -258,7 +258,7 @@ margin:0 auto;
 
 	}
 	.hex {
-		background:url(../images/hex.png);
+		background:url(../img/hex.png);
 		width:101px;
 		height:115px;
 		display:inline-block;
@@ -358,7 +358,7 @@ left:220px;
 		width:25px;
 		height:25px;
 		text-indent:-9999px;
-		background:url(../images/x.png) no-repeat center;
+		background:url(../img/x.png) no-repeat center;
 		transition:200ms;
 		display: block;
 
@@ -383,5 +383,12 @@ left:220px;
 			margin-top:20px;
 			color:$orange;
 		}
+	}
+}
+
+#leadForm {
+	input {
+		border: 1px solid #000;
+		padding: 5px;
 	}
 }
