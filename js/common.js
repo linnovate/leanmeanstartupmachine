@@ -114,6 +114,9 @@ $(document).ready(function() {
 			//Close lightbox
 			$(".lightbox").removeClass("open").css('left', '-999px');
 
+			//Clearing the form
+			$("input[type=text], input[type=email], input[type=tel]").val("");
+
 			//Prevent form submission
 			e.preventDefault();
 		}
