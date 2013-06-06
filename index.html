@@ -170,17 +170,22 @@
 	<div class="form lightbox">
 		<h1>hire your ninja!</h1>
 		<p>please fill up this form so we'll contact you back</p>
-		<form id="leadForm">
-			<input type="text" placeholder="First Name" name="first_name" onblur="validate(this);" onfocus="changeNinja(this, 1);"><br>
-			<input type="text" placeholder="Last Name" name="last_name" onblur="validate(this);" onfocus="changeNinja(this, 2);"><br>
-			<input type="tel" placeholder="Phone Number" name="phone" onblur="validate(this);" onfocus="changeNinja(this, 3);"><br>
-			<input type="email" placeholder="Email" name="email" onblur="validate(this);" onfocus="changeNinja(this, 4);"><br>
+		<form id="leadForm" novalidate>
+			<b>*</b> <input type="text" placeholder="First Name" name="first_name" onblur="validate(this);" onfocus="changeNinja(this, 1);"><br>
+			<b>*</b> <input type="text" placeholder="Last Name" name="last_name" onblur="validate(this);" onfocus="changeNinja(this, 2);"><br>
+			<b>*</b> <input type="tel" placeholder="Phone Number" name="phone" onblur="validate(this);" onfocus="changeNinja(this, 3);"><br>
+			<b>*</b> <input type="email" placeholder="Email" name="email" onblur="validate(this);" onfocus="changeNinja(this, 4);"><br>
 			<input type="submit" value="Submit" class="cta">
 		</form>
 		<div class="ninja-container">
-			<img src="img/ninja-full.jpg" alt="">
-			<img class="ninja-half" src="img/ninja-half-1.jpg" alt="">
+			<img src="img/ninja-full.jpg" alt="Never Seen a NINJA?!">
+			<img class="ninja-half" src="img/ninja-half-1.jpg" alt="Fill The Form!">
 		</div>
+	</div>
+	<div class="success lightbox">
+		<h1>thank you</h1>
+		<p>your message got through to us, we will contact you shortly</p>
+		<div class="image-container"><img src="img/success.jpg" alt="Thank You"></div>
 	</div>
 </body>
 </html>

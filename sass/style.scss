@@ -397,7 +397,21 @@ left:220px;
 	}
 }
 
-#leadForm {
+#leadForm {	
+	float: left;
+	width: 30%;
+
+	b {
+		color: red;
+	}
+
+	.error-message {
+		display: none;
+		color: red;
+		font-size: 0.8em;
+		text-transform: uppercase;
+	}
+
 	input[type="email"],
 	input[type="tel"],
 	input[type="text"] {
@@ -405,7 +419,7 @@ left:220px;
 		border: 1px solid #dbdbdb;
 		font-size: 1.1em;
 		padding: 15px 10px;
-		width: 299px;
+		width: 260px;
 		margin: 10px 0; 
 	}
 
@@ -417,9 +431,6 @@ left:220px;
 		background: $error-background-color;
 		border-color: $error-border-color;
 	}
-
-	float: left;
-	width: 30%;
 }
 
 .ninja-container {
@@ -430,6 +441,23 @@ left:220px;
 		position: absolute;
 		top:5px;
 		left:-19px;
+	}
+}
+
+.success {
+	text-transform: uppercase;
+	text-align: center;
+
+	h1{
+		color: $orange;
+	}
+	
+	div.image-container {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		max-height: 270px;
 	}
 }
 
