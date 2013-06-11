@@ -1,0 +1,54 @@
+<section data-ng-controller="IndexController" data-ng-click="closeModal()"> 
+	<section id="main-banner">
+		<div class="inner">
+			<header class="site-header">
+				<a class="logo" href="http://linnovate.net">Linnovate</a>
+				<a href data-ng-click="openModal('lead', $event);" class="cta">Bring it On</a>
+			</header>
+			<section id="hero">
+				<h1>Lean <span>Mean</span> Startup Machine</h1>
+				<h2>We build startups, using open source technology</h2>
+			</section>
+			<ul id="stack">
+				<li class="mongo" data-ng-click="openModal('mongodb', $event);">
+					<div class="background"></div>
+					<span rel="mongo" href>Mongo.DB</span>
+				</li>
+				<li class="express" data-ng-click="openModal('expressjs', $event);">
+					<div class="background"></div>
+					<span rel="express" href>Express.js</span>
+				</li>
+				<li class="angular" data-ng-click="openModal('angularjs', $event);">
+					<div class="background"></div>
+					<span rel="angular" href>Angular.js</span>
+				</li>
+				<li class="node" data-ng-click="openModal('nodejs', $event);">
+					<div class="background"></div>
+					<span rel="node" href>Node.js</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="main-content">
+		<div class="inner">
+			<div class="ninja"></div>
+			<p><strong>We believe in <strong>Lean Startups</strong> - being lean means not building uneccesary bloat for our customers, on constantly focusing on the essence of the product and reiterating untill we get it right.</p>
+			<ul class="numbers">
+				<li><span class="hex">1</span><span class="subtitle">Devoted <strong>Developer</strong></span></li>
+				<li><span class="hex">2</span><span class="subtitle">Weeks to <strong>POC</strong></span></li>
+				<li><span class="hex">3</span><span class="subtitle">Months to <strong>Beta</strong></span></li>
+				<li><span class="hex">4</span><span class="subtitle">Deadly <strong>Open Arts</strong> </span></li>
+			</ul>
+			<a href data-ng-click="openModal('lead', $event);" class="cta large">Hire Your Ninja</a>
+		</div>
+	</section>
+	<footer>
+		<div class="pull-left">
+			© 2013 Linnovate LTD.
+		</div>
+		<div class="pull-right">
+			<a href="http://linnovate.net">About</a>
+		</div>
+	</footer>
+	<div class="lightbox" data-ng-class="modal.class" data-ng-include="" src="modal.path" data-stop-event="click"></div>
+</section>
