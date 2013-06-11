@@ -36,7 +36,7 @@ var mongoose = require('mongoose'),
 		});
 
 		var notifier = require('../mailer/notifier');
-		var to = "mail@amoshaviv.com";
+		var to = "lior@linnovate.net";
 		var fullName = lead.firstName + ' ' + lead.lastName;
 		var subject =  fullName + ' sent you a lead ';
 		var text = fullName + " sent you a lead, call him/her: " + lead.phone + " or email him/her: " + lead.email + " back."
