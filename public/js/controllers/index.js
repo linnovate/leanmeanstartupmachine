@@ -1,27 +1,15 @@
-function IndexController($scope, $location, Leads){
-	$scope.modal = {
-		class: "",
-		path: ""
-	}
-
-	$scope.lead = {};
+function IndexController($scope, Global, Leads){
+	$scope.global = Global;
 
 	$scope.openModal = function(modalID, event) {
-		$scope.modal.path = "views/dialogs/" + modalID + ".html";
-		$scope.modal.class = "open";
+		Global.modal.path = "views/dialogs/" + modalID + ".html";
+		Global.modal.class = "open";
 
 		event.stopPropagation();
 	};
 
 	$scope.closeModal = function() {
-		$scope.modal.path = "";
-		$scope.modal.class = "";
-	};
-
-	$scope.send = function(lead){	
-		$scope.message = null;
-		Leads.save(lead, function(response) {
-			$location.path("success");
-		});
+		Global.modal.path = "";
+		Global.modal.class = "";
 	};
 }

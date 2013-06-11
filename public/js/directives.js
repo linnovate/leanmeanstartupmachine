@@ -12,7 +12,7 @@ window.app.directive('stopEvent', function() {
 window.app.directive('ngBlur', function($parse) {
     return function(scope, element, attrs) {
         element.bind('blur', function(){
-            scope.$eval(attrs.ngBlur);
+            scope.$apply(attrs.ngBlur);
         });
     };
 });
@@ -20,7 +20,7 @@ window.app.directive('ngBlur', function($parse) {
 window.app.directive('ngFocus', function($parse) {
     return function(scope, element, attrs) {
         element.bind('focus', function(){
-            scope.$eval(attrs.ngFocus);
+            scope.$apply(attrs.ngFocus);
         });
     };
 });

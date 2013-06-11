@@ -4,8 +4,8 @@ var path = require('path')
   , templatePath = path.normalize(__dirname + '/../app/mailer/templates')
   , notifier = {
       APN: false,
-      email: false, // true
-      actions: ['comment'],
+      email: true, // true
+      actions: ['lead'],
       tplPath: templatePath,
       postmarkKey: 'POSTMARK_KEY',
       parseAppId: 'PARSE_APP_ID',
@@ -13,40 +13,12 @@ var path = require('path')
     }
 
 module.exports = {
-  amos: {
-    db: 'mongodb://admin:password@ds027338.mongolab.com:27338/israelhayom',
-    root: rootPath,
-    notifier: notifier,
-    app: {
-      name: 'ישראל היום - מהדורה דיגיטלית - Amos'
-    },
-    facebook: {
-      clientID: "APP_ID",
-      clientSecret: "APP_SECRET",
-      callbackURL: "http://localhost:3000/auth/facebook/callback"
-    },
-    twitter: {
-      clientID: "CONSUMER_KEY",
-      clientSecret: "CONSUMER_SECRET",
-      callbackURL: "http://localhost:3000/auth/twitter/callback"
-    },
-    github: {
-      clientID: 'APP_ID',
-      clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/auth/github/callback'
-    },
-    google: {
-      clientID: "APP_ID",
-      clientSecret: "APP_SECRET",
-      callbackURL: "http://localhost:3000/auth/google/callback"
-    },
-  },
   development: {
-    db: 'mongodb://admin:password@ds027338.mongolab.com:27338/israelhayom',
+    db: 'mongodb://admin:password@ds041367.mongolab.com:41367/development',
     root: rootPath,
     notifier: notifier,
     app: {
-      name: 'ישראל היום - מהדורה דיגיטלית - Development'
+      name: 'MEAN Lean Startup Machine - Development'
     },
     facebook: {
       clientID: "455818271176818",
@@ -70,11 +42,11 @@ module.exports = {
     },
   },
   test: {
-    db: 'mongodb://admin:password@ds027338.mongolab.com:27338/israelhayom',
+    db: 'mongodb://admin:password@ds041367.mongolab.com:41367/development',
     root: rootPath,
     notifier: notifier,
     app: {
-      name: 'ישראל היום - מהדורה דיגיטלית - Test'
+      name: 'MEAN Lean Startup Machine - Test'
     },
     facebook: {
       clientID: "APP_ID",
@@ -98,11 +70,11 @@ module.exports = {
     }
   },
   production: {
-    db: 'mongodb://admin:password@ds027338.mongolab.com:27338/israelhayom',
+    db: 'mongodb://admin:password@ds041367.mongolab.com:41367/development',
     root: rootPath,
     notifier: notifier,
     app: {
-      name: 'ישראל היום - מהדורה דיגיטלית'
+      name: 'MEAN Lean Startup Machine'
     },
     facebook: {
       clientID: "455818271176818",

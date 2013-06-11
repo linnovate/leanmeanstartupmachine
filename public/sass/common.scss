@@ -25,6 +25,10 @@ ul {
 	padding: 0;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 a:link, , a:visited {
 	color:$orange;
 	text-decoration:none;
@@ -418,18 +422,16 @@ li:hover .hex {
 	}
 
 	.error-message {
-		display: none;
 		color: red;
-		font-size: 0.8em;
+		font-size: 0.6em;
 		text-transform: uppercase;
 	}
 
 	input[type="email"],
-	input[type="tel"],
+	input[type="number"],
 	input[type="text"] {
 		border-radius: 0;
 		text-transform: uppercase;
-		border: 1px solid #dbdbdb;
 		font-size: 1.1em;
 		height: 50px;
 		line-height: 50px;
@@ -438,14 +440,13 @@ li:hover .hex {
 		margin: 10px 0; 
 	}
 
+	input[type="number"] {
+		line-height: 30px;
+	}
+
 	input[type="submit"] {
 		float: left; 
 		border:  none;
-	}
-
-	input.invalid {
-		background: $error-background-color;
-		border-color: $error-border-color;
 	}
 }
 
