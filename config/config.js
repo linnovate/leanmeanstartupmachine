@@ -18,7 +18,7 @@ module.exports = {
     root: rootPath,
     notifier: notifier,
     app: {
-      name: 'MEAN Lean Startup Machine - Development'
+      name: 'MEAN Stack Development'
     },
     facebook: {
       clientID: "455818271176818",

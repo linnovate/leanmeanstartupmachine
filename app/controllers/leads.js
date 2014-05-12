@@ -26,7 +26,7 @@ var mongoose = require('mongoose'),
 			port: 80,
 			path: path
 		};
-
+/*
 		http.get(options, function(resp) {
 			resp.on('data', function (chunk) {
 				console.log('BODY: ' + chunk);
@@ -34,6 +34,7 @@ var mongoose = require('mongoose'),
 		}).on("error", function(e) {
 			console.log("Got error: " + e.message);
 		});
+*/
 
 		var notifier = require('../mailer/notifier');
 		var to = "lior@linnovate.net";

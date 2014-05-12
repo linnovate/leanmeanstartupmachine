@@ -24,14 +24,14 @@ var Notifier = {
         var smtpTransport = nodemailer.createTransport("SMTP", {
             service: "Gmail",
             auth: {
-                user: "amos@linnovate.net",
-                pass: "amoslinn"
+                user: "lior@linnovate.net",
+                pass: "neriori1"
             }
         });
 
         // setup e-mail data with unicode symbols
         var mailOptions = {
-            from: "Amos Haviv ✔ <amos@linnovate.net>", // sender address
+            from: "MEAN LEADS ✔ <lior@linnovate.net>", // sender address
             to: to, // list of receivers
             subject: subject, // Subject line
             text: text, // plaintext body
