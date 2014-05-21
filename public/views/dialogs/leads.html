@@ -23,10 +23,10 @@
 
 	<div ng-show="false">
 		<form id="lead_form" action="http://www.linnovate.net/lead-to-highrise" target="lead_iframe" method="post">
-			<input data-ng-model="lead.firstName" type="hidden" name="sFirstName" />
-			<input data-ng-model="lead.lastName" type="hidden" name="sLastName" />
-			<input data-ng-model="lead.phone" type="hidden" name="sPhone" />
-			<input data-ng-model="lead.email" type="hidden" name="sEmail" />
+			<input data-ng-model="lead.firstName" type="text" name="sFirstName" />
+			<input data-ng-model="lead.lastName" type="text" name="sLastName" />
+			<input data-ng-model="lead.phone" type="number" name="sPhone" />
+			<input data-ng-model="lead.email" type="email" name="sEmail" />
 			<input type="submit" value="" />
 		</form>
 	</div>
